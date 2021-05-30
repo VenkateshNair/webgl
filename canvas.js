@@ -392,7 +392,7 @@ function draw()
 
 	//triangle
 	translateMatrix = mat4.create();
-	mat4.translate(modelViewMatrix,translateMatrix,[-1.5,0.0,-6.0]);
+	mat4.translate(modelViewMatrix,translateMatrix,[-1.5,0.0,-10.0]);
 	mat4.rotateY(rotateMatrix,rotateMatrix,degToRad(angle));
 	mat4.multiply(modelViewMatrix,modelViewMatrix,rotateMatrix);
 	mat4.multiply(modelViewProjectionMatrix,perspectiveProjectionMatrix,modelViewMatrix);
@@ -410,7 +410,7 @@ function draw()
 	
 	translateMatrix = mat4.create();
 	 rotateMatrix = mat4.create();
-	mat4.translate(modelViewMatrix,translateMatrix,[1.5,0.0,-6.0]);
+	mat4.translate(modelViewMatrix,translateMatrix,[1.5,0.0,-10.0]);
 	mat4.scale(scaleMatrix,scaleMatrix,[0.75,0.75,0.75]);
 	mat4.multiply(modelViewMatrix,modelViewMatrix,scaleMatrix);
 	mat4.rotateX(rotateMatrix,rotateMatrix,degToRad(angle));
